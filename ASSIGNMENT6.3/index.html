@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS overflow examples and layout fixing demonstration.">
+    <title>Assignment 6.3 - Overflow and Layout Fixing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>CSS Overflow & Layout Fixing</h1>
+        <p>Learn how to control content that exceeds a container.</p>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>1. Overflow: Visible</h2>
+            <p>
+                Extra content remains visible outside the container.
+                It may overlap nearby elements.
+            </p>
+
+            <div class="overflow-box overflow-visible">
+                <p><strong>Visible Container</strong></p>
+                <p>
+                    This is a long paragraph used to demonstrate visible
+                    overflow. When the text exceeds the fixed height,
+                    the remaining content continues outside the container.
+                    This behavior can be useful when intentional, but it
+                    may overlap other content and cause layout problems.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Overflow: Hidden</h2>
+            <p>
+                Content outside the container's boundaries is clipped
+                and cannot be reached using a scrollbar.
+            </p>
+
+            <div class="overflow-box overflow-hidden">
+                <p><strong>Hidden Container</strong></p>
+                <p>
+                    This paragraph contains extra text to demonstrate
+                    hidden overflow. The container keeps its fixed height,
+                    and content extending beyond its boundaries is clipped.
+                    The hidden portion is not visible to the reader.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Overflow: Auto</h2>
+            <p>
+                A scrollbar appears when the content needs more space
+                than the container provides.
+            </p>
+
+            <div class="overflow-box overflow-auto">
+                <p><strong>Auto Container</strong></p>
+                <p>
+                    This is the first paragraph inside the auto container.
+                    The fixed height limits the visible area. Additional
+                    content remains accessible by scrolling when required.
+                </p>
+                <p>
+                    This is the second paragraph. It provides more content
+                    so that a vertical scrollbar is needed. You can scroll
+                    through this text without making the entire page taller.
+                </p>
+                <p>
+                    This is the third paragraph. CSS overflow auto is often
+                    useful for activity feeds, message panels, log windows,
+                    and other content areas with limited space.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Overflow: Scroll</h2>
+            <p>
+                A scrolling mechanism is provided even if the content
+                does not need to overflow.
+            </p>
+
+            <div class="overflow-box overflow-scroll">
+                <p><strong>Scroll Container</strong></p>
+                <p>
+                    This paragraph demonstrates the scroll overflow value.
+                    The container has a fixed height, so you can use its
+                    scrollbar to move through content that extends beyond
+                    the visible area.
+                </p>
+                <p>
+                    More text is included to make scrolling possible.
+                    Scrollbars may look different across browsers and
+                    operating systems.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Second Scrollable Content Box</h2>
+            <p>
+                This example uses overflow auto for a practical
+                scrollable reading panel.
+            </p>
+
+            <div class="reading-box">
+                <h3>Web Development Notes</h3>
+                <p>
+                    HTML provides the structure of a webpage. It uses
+                    elements such as headings, paragraphs, links, images,
+                    lists, forms, and tables.
+                </p>
+                <p>
+                    CSS controls the presentation of HTML. It can change
+                    colors, fonts, spacing, borders, layouts, and responsive
+                    behavior.
+                </p>
+                <p>
+                    JavaScript adds interactivity. It can respond to user
+                    actions, update page content, validate forms, and
+                    communicate with web services.
+                </p>
+                <p>
+                    A fixed-height reading panel can keep a page organized.
+                    With overflow auto, readers can access all the content
+                    without forcing the panel to expand vertically.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Overflow Layout Problem and Fix</h2>
+            <p>
+                The first example below uses a fixed width that can be
+                wider than a small screen. The second uses a responsive
+                width to fix the problem.
+            </p>
+
+            <h3>Problem: Fixed-width container</h3>
+            <div class="layout-problem">
+                This box has a width of 900px. On a narrow screen, it can
+                extend beyond the available space and create horizontal
+                page scrolling.
+            </div>
+
+            <h3>Solution: Responsive container</h3>
+            <div class="layout-fixed">
+                This box uses width: 100% and max-width: 900px, so it can
+                shrink to fit smaller screens while remaining limited
+                to 900px on larger screens.
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Assignment 6.3 — CSS Fundamentals</p>
+    </footer>
+
+</body>
+</html>
